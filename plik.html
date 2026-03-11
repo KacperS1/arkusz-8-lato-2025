@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        header {
+            background-color: tomato;
+            color: mistyrose;
+            padding: 10px;
+        }
+        footer {
+            background-color: tomato;
+            color: mistyrose;
+            padding: 10px;
+        }
+
+        nav {
+            width: 20%;
+        }
+        #blok1{
+            background-color: mistyrose;
+            height: 170px;
+            font-size: 200%;  
+        }
+         #blok2{
+            background-color: #FFAEA5;
+            height: 170px;
+            font-size: 200%;
+            
+        }
+         #blok3{
+            background-color: #FFAEA5;
+            height: 170px;
+            font-size: 200%;
+            
+        }
+        main {
+            background-color: mistyrose;
+            width: 80%;
+            height: 510px;
+            overflow: auto;
+
+        }
+        #main {
+            display: flex;
+        }
+        table {
+            margin: auto;
+            width: 60%;
+            border: dashed 1px indigo;
+        }
+        #sekcja3 {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function przelaczSekcje(numerSekcji) {
+    const blokiMenu = [
+        document.getElementById('blok1'),
+        document.getElementById('blok2'),
+        document.getElementById('blok3')
+    ];
+    
+    const sekcjeTresci = [
+        document.getElementById('sekcja1'),
+        document.getElementById('sekcja2'),
+        document.getElementById('sekcja3')
+    ];
+
+    for (let i = 0; i < blokiMenu.length; i++) {
+        if (i === (numerSekcji - 1)) {
+            blokiMenu[i].style.backgroundColor = 'MistyRose';
+            sekcjeTresci[i].style.display = 'block';
+        } 
+        else {
+            blokiMenu[i].style.backgroundColor = '#FFAEA5';
+            sekcjeTresci[i].style.display = 'none';
+        }
+    }
+}
+</script>
+    <header>
+        <h3>Poznaj smoki!</h3>
+    </header>
+        <section id="main">
+            <nav>
+                <div id="blok1" onclick="przelaczSekcje(1)">Baza</div>
+                <div id="blok2" onclick="przelaczSekcje(2)">Opisy</div>
+                <div id="blok3" onclick="przelaczSekcje(3)">Galeria</div>
+            </nav>
+
+            <main>
+                <section id="sekcja1">
+                    <h3>Baza Smoków</h3>
+                        <form>
+                            <select>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                                <option>Polska</option>
+                            </select>
+
+                            <input type="submit" value="Szukaj">
+                        </form>
+                            <br>
+                            <table>
+                                <thead>
+                                    <th>Nazwa</th>
+                                    <th>Długość</th>
+                                    <th>Szerokość</th>
+                                </thead>
+                            </table>
+                </section>
+
+                <section id="sekcja2">
+                    <h3>Opisy smoków</h3>
+                    <h3>Smok czerwony</h3>
+                    <P>Pochodzi z Chin. Ma 1000 lat. Żywi się mniejszymi zwierzętami. Posiada łuski cenne na rynkach wschodnich do wyrabiania lekarstw. Jest dziki i groźny.</P>
+
+                    <h3>Smok zielony</h3>
+                    <p>Pochodzi z Bułgarii. Ma 10000 lat. Żywi się mniejszymi zwierzętami, ale tylko w kolorze zielonym. Jest kosmaty. Z sierści zgubionej przez niego, tka się najdroższe materiały.</p>
+
+                    <h3>Smok niebieski</h3>
+                    <p>Pochodzi z Francji. Ma 100 lat. Żywi się owocami morza. Jest natchnieniem dla najlepszych malarzy. Często im pozuje. Smok ten jest przyjacielem ludzi i czasami im pomaga. Jest jednak próżny i nie lubi się przepracowywać.</p>
+                </section>
+                <section id="sekcja3">
+                    <img src="smok1.png" alt="Smok czerwony">
+                    <img src="smok2.JPG" alt="Smok zielony">
+                    <img src="smok3.JPG" alt="Smok niebieski">
+                </section>
+
+            </main>
+        </section>
+        <footer>
+            <p>Stronę wykonał:0000000000</p>
+        </footer>
+</body>
+</html>
